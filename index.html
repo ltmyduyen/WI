@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bá Lư & Thị Tin</title>
+    <title>Bá Lư & Phan Tin</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,10 +27,25 @@
 
     <section id="hero">
 
-        <div class="overlay"></div> <div class="wedding-gate">
-            <div class="gate-left"></div>  <div class="gate-right"></div> <div class="gate-center-btn">
-                <span></span>
-                <p>Mở thiệp</p>
+        <div class="wedding-gate">
+            <div class="gate-left">
+                <div class="gate-inner">
+                    <div class="gate-corner top-left"></div>
+                    <div class="gate-corner bottom-left"></div>
+                </div>
+            </div>  
+            
+            <div class="gate-right">
+                <div class="gate-inner">
+                    <div class="gate-corner top-right"></div>
+                    <div class="gate-corner bottom-right"></div>
+                </div>
+            </div> 
+
+            <div class="gate-center-btn">
+                <div class="btn-pulse-ring"></div>
+                <span>囍</span>
+                <p>MỞ THIỆP</p>
             </div>
         </div>
 
@@ -40,16 +55,16 @@
             
             <div class="oriental-hero-header">
 
-                <div class="double-happiness-symbol">LỄ ĐÍNH HÔN</div>
+                <div class="double-happiness-symbol">LỄ THÀNH HÔN</div>
                 
             </div>
 
-            <h1 class="oriental-hero-names">Bá Lư & Thị Tin</h1>
+            <h1 class="oriental-hero-names">Bá Lư   &   Phan Tin</h1>
             
-            <p class="oriental-hero-date">Chủ Nhật | 29.11.2025</p>
+            <p class="oriental-hero-date">Thứ 7 | 08.08.2026</p>
 
             <div class="oriental-hero-photo" data-aos="zoom-in">
-                <img src="images/1.jpg" alt="Wedding Hero Photo">
+                <img src="images/im.jpg" alt="Wedding Hero Photo">
             </div>
 
             <div class="oriental-hero-quote">
@@ -152,16 +167,12 @@
     </section>
     <section id="couple">
 
-            <div class="section-title" data-aos="fade-up">
-                <h2>Cô Dâu & Chú Rể</h2>
-            </div>
-
             <div class="couple-wrapper">
 
                 <!-- Chú Rể -->
                 <div class="person" data-aos="fade-right">
                     <div class="img-frame">
-                        <img src="images/1.jpg" alt="Chú rể">
+                        <img src="images/CR.jpg" alt="Chú rể">
                     </div>
                     <h3>Bá Lư</h3>
                     <p>Chú rể</p>
@@ -175,7 +186,7 @@
                     <div class="img-frame">
                         <img src="images/1.jpg" alt="Cô dâu">
                     </div>
-                    <h3>Thị Tin</h3>
+                    <h3>Phan Tin</h3>
                     <p>Cô dâu</p>
                 </div>
 
@@ -268,18 +279,19 @@
             <div class="family-columns">
                 <div class="family-column">
                     <h3 class="side-title">NHÀ TRAI</h3>
-                    <p class="parents-label">Ông - Bà</p>
+                    <p class="parents-label">Bà</p>
                     <p class="parent-name"></p>
                     <p class="parent-name">LÊ THỊ CẦN</p>
-                    <p class="family-address">XÃ BẮC RUỘNG<br>TP LÂM ĐỒNG</p>
+                    <p class="parent-name empty-line">&nbsp;</p>
+                    <p class="family-address">BẮC RUỘNG - LÂM ĐỒNG</p>
                 </div>
                 
                 <div class="family-column">
                     <h3 class="side-title">NHÀ GÁI</h3>
                     <p class="parents-label">Ông - Bà</p>
-                    <p class="parent-name">LÊ VĂN SỸ</p>
-                    <p class="parent-name">ĐÀO THỊ HÀ</p>
-                    <p class="family-address">Phường xxx<br>TP xxx</p>
+                    <p class="parent-name">PHAN TẤN TÚ</p>
+                    <p class="parent-name">DƯƠNG THỊ TIÊN</p>
+                    <p class="family-address">THĂNG ĐIỀN - ĐÀ NẴNG</p>
                 </div>
             </div>
 
@@ -315,7 +327,7 @@
         <div class="ceremony-details">
             <h3 class="ceremony-header">LỄ THÀNH HÔN</h3>
             
-            <p class="time-prefix">Vào Lúc<br><span class="highlight-day">Thứ Bảy</span></p>
+            <p class="time-prefix">Vào Lúc</p>
             
             <!-- Hàng hiển thị Giờ | Ngày | Năm TO RÕ -->
             <div class="wedding-time-row">
@@ -330,56 +342,81 @@
 
             <p class="lunar-calendar-text">(Tức Ngày 26 Tháng 06 Năm Bính Ngọ)</p>
             
-            <div class="geo-location-box">
-                <p class="geo-title">📍 Tại Tư Gia Nhà Trai</p>
-            </div>
+
         </div>
 
     </section>
-
-    <section>
-        <section id="countdown">
-            <p class="countdown-title">Đếm ngược thời gian</p>
-            <div class="countdown">
+    <section id="map" data-aos="fade-up">
+        <div class="map-section-container">
             
-
-            <div class="count-box">
-                <h3 id="days">0</h3>
-                <span>Ngày</span>
+            <!-- 1. Phần thông tin chữ ở trên -->
+            <div class="map-info-block">
+                <div class="map-icon-marker">📍</div>
+                <h2 class="map-title">Địa Điểm Tổ Chức</h2>
+                <p class="map-address-detail">
+                    Nhà Hàng Tiệc Cưới Phong Liên<br>
+                    <span>Số 171 Nguyễn Thái Sơn, Phường 7, Gò Vấp, TP. Hồ Chí Minh</span>
+                </p>
+                <!-- Nút bấm thông minh mở app dẫn đường -->
+                <a href="https://maps.app.goo.gl/xxx" target="_blank" class="btn-open-map">
+                    <span>Chỉ Đường Trên Google Maps</span>
+                </a>
             </div>
 
-            <div class="count-box">
-                <h3 id="hours">0</h3>
-                <span>Giờ</span>
-            </div>
-
-            <div class="count-box">
-                <h3 id="minutes">0</h3>
-                <span>Phút</span>
-            </div>
-
-            <div class="count-box">
-                <h3 id="seconds">0</h3>
-                <span>Giây</span>
+            <!-- 2. Phần bản đồ nhúng ở dưới -->
+            <div class="map-wrapper">
+                <div class="map-container">
+                    <!-- Bạn nhớ thay đoạn src bằng link embed thật của bạn nhé -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.944209939523!2d106.68589417573678!3d10.815560958470505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528eec1317531%3A0x6bba876378e9f506!2sLuxury%20Palace!5e0!3m2!1svi!2s!4v1710000000000!5m2!1svi!2s"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
 
         </div>
-<section id="map" data-aos="fade-up">
+    </section>
+<section id="countdown-section" data-aos="fade-up">
+        <div class="countdown-container">
+            <p class="countdown-title">Đếm ngược thời gian</p>
+            
+            <div class="countdown-wrapper">
+                <!-- Ngày -->
+                <div class="count-box">
+                    <div class="count-number-glow">
+                        <h3 id="days">0</h3>
+                    </div>
+                    <span>Ngày</span>
+                </div>
 
-        <div class="section-title">
-            <h2>Địa Điểm Tổ Chức</h2>
-        </div>
+                <!-- Giờ -->
+                <div class="count-box">
+                    <div class="count-number-glow">
+                        <h3 id="hours">0</h3>
+                    </div>
+                    <span>Giờ</span>
+                </div>
 
-        <div class="map-wrapper">
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb="
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
+                <!-- Phút -->
+                <div class="count-box">
+                    <div class="count-number-glow">
+                        <h3 id="minutes">0</h3>
+                    </div>
+                    <span>Phút</span>
+                </div>
+
+                <!-- Giây -->
+                <div class="count-box-seconds">
+                    <div class="count-number-glow pulse-seconds">
+                        <h3 id="seconds">0</h3>
+                    </div>
+                    <span>Giây</span>
+                </div>
             </div>
+            
         </div>
-
     </section>
 <section id="gallery">
 
@@ -430,29 +467,48 @@
         </div>
 
     </section>
+
+<audio id="weddingAudio" src="music/wedding.mp3" loop></audio>
+
     <audio id="bgMusic" loop>
         <source
             src="music/wedding.mp3"
             type="audio/mpeg">
     </audio>
-
-    <button id="musicBtn">
-        🎵
+    <button id="musicBtn" class="music-toggle-btn" aria-label="Toggle Music">
+        <div class="music-icon-wrapper">
+            <!-- Icon nốt nhạc đôi thanh lịch -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18V5l12-2v13" />
+                <circle cx="6" cy="18" r="3" />
+                <circle cx="18" cy="16" r="3" />
+            </svg>
+        </div>
     </button>
-
     <footer data-aos="fade-up" data-aos-delay="200">
+        <div class="footer-luxury-container">
+            <!-- Biểu tượng hoa hồng tình yêu chốt đuôi thiệp -->
+            <div class="footer-rose-icon">🌹</div>
+            
+            <!-- Chữ Thank You phủ hào quang vàng kim -->
+            <h2 class="footer-thankyou">Thank You</h2>
+            
+            <!-- Lời cảm ơn chân thành, ấm áp -->
+            <p class="footer-sub-text">
+                Chân thành cảm ơn sự hiện diện và những lời chúc phúc<br>
+                tốt đẹp nhất của quý khách dành cho gia đình chúng tôi!
+            </p>
 
-
-        <p class="footer-thankyou">
-            Thank You
-        </p>
-        
-        <p class="footer-sub-text">
-            Chân thành cảm ơn sự hiện diện của quý khách!
-        </p>
-
-        <div class="footer-deco-bottom">─── ❖ ───</div>
-
+            <!-- Họa tiết chỉ hoàng gia kết hợp hoa văn thắt nút -->
+            <div class="footer-deco-bottom">
+                <span class="line"></span>
+                <span class="diamond">✦ ❖ ✦</span>
+                <span class="line"></span>
+            </div>
+            
+            <!-- Dòng bản quyền nhỏ tinh tế phía dưới cùng -->
+            <p class="footer-copyright">© Bá Lư & Phan Tin Wedding • Forever & Always</p>
+        </div>
     </footer>
 
 
