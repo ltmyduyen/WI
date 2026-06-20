@@ -1,0 +1,1294 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+.wedding-card-container {
+    max-width: 500px;          /* Giới hạn chiều rộng thiệp (chuẩn màn hình điện thoại) */
+    margin: 0 auto;            /* Căn giữa khung này trên màn hình máy tính */
+    background-color: #faf7f2; /* Màu nền cho toàn bộ thiệp */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ hai bên rìa cho thiệp nổi lên */
+    position: relative;
+    overflow: hidden;          /* Giữ các thành phần không bị tràn ra ngoài khung */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0e6d2; /* Bạn có thể đổi thành màu xám nhẹ #f5f5f5 hoặc màu kem tùy ý */
+}
+#hero {
+    position: relative;
+
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ===================================================
+    HERO
+   =================================================== */
+#hero {
+    padding: 40px 20px 40px 20px;
+    background-color: #faf7f2 ; /* Màu nền kem nhạt quý phái giống ảnh mẫu */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;         /* Chiếm trọn màn hình khi vừa mở thiệp */
+    align-items: center;
+}
+
+.oriental-hero-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    background: #faf7f2;
+    padding: 50px 30px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+}
+
+
+.double-happiness-symbol {
+    font-size: 40px;
+    color: #b31010;
+    font-weight: 700;
+    line-height: 1;
+}
+
+
+/* Font chữ dâu rể Serif mảnh, thanh lịch sang trọng chuẩn mẫu */
+.oriental-hero-names {
+    font-family:  'Great Vibes', cursive;
+    font-size: 38px;
+    color: #b31010;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Ngày tháng thanh mảnh dưới tên */
+.oriental-hero-date {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 16px;
+    color: #b38446;
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Khung ảnh cưới trung tâm: Bo góc dày, tạo phom đứng tỷ lệ 3:4 cực đẹp */
+.oriental-hero-photo {
+    width: 88%;
+    margin: 0 auto 35px auto;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    aspect-ratio: 3 / 4; 
+}
+
+.oriental-hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+.oriental-hero-photo:hover img {
+    transform: scale(1.03);
+}
+
+/* Câu châm ngôn uốn lượn dưới chân ảnh cưới */
+.oriental-hero-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: #b31010;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.oriental-hero-quote .quote-line1 {
+    font-style: italic;
+    margin-bottom: 4px;
+}
+
+.oriental-hero-quote .quote-line2 {
+    font-weight: 400;
+}
+
+/* Họa tiết trang trí mảnh ở cuối cùng */
+.oriental-hero-deco {
+    color: #b38446;
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+/* Tự động tối ưu hóa hiển thị co giãn trên giao diện Mobile */
+@media (max-width: 576px) {
+    .oriental-hero-container { padding: 35px 15px; border-radius: 30px; }
+    .oriental-hero-names { font-size: 28px; }
+    .double-happiness-symbol { font-size: 46px; }
+    .lantern { width: 35px; top: -10px; }
+    .oriental-hero-photo { width: 95%; border-radius: 20px; }
+    .oriental-hero-quote { font-size: 15px; }
+}
+
+.wedding-date {
+    margin-top: 2px;
+
+    letter-spacing: 5px;
+}
+
+
+/* =====================
+   INVITATION
+===================== */
+
+#invitation {
+    padding: 0px 20px;
+    background-color: #faf7f2 !important; /* Đồng bộ nền kem trơn nhạt */
+    display: flex;
+    justify-content: center;
+}
+
+/* Bo khối nội dung gọn gàng trong 500px tương đương phần Hero */
+.invitation-wrapper {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #faf7f2;
+    padding: 50px 25px;
+    border-radius: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03); /* Đổ bóng nhẹ cực sang */
+    border: 1px solid rgba(179, 16, 16, 0.08);   /* Viền đỏ mờ vi mô */
+    position: relative;
+}
+
+/* Thêm biểu tượng trang trí nhỏ ở đầu khối lời mời */
+.invitation-wrapper::before {
+    content: "❖";
+    display: block;
+    color: #b38446;
+    font-size: 18px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* "Trân trọng kính mời" - Thanh thoát, tinh tế */
+.invite-small {
+    font-family: 'Montserrat', sans-serif;
+    color: #b38446;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    font-size: 14px; /* Hạ size chữ xuống để tạo độ thoáng thanh lịch */
+    font-weight: 500;
+}
+
+/* Tên Cô dâu / Chú rể - Chuyển sang màu đỏ hoàng gia, kích thước vừa vặn cân đối */
+.invitation-wrapper h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 56px; /* Giảm từ 90px xuống 56px để chữ không bị nuốt chửng không gian */
+    font-weight: normal;
+    color: #b31010; /* Màu đỏ đồng bộ */
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+/* Ký tự & nối giữa hai tên */
+.invitation-wrapper span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: #b38446; /* Màu vàng kim quý phái */
+    margin: 10px 0;
+}
+
+/* Lời mời - Font chữ dễ đọc, hiện đại */
+.invite-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 0 15px;
+}
+
+/* Ngày tháng tổ chức - Đậm nét, sang trọng */
+.invite-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #b31010;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-top: 1px dashed rgba(179, 16, 16, 0.2);
+    border-bottom: 1px dashed rgba(179, 16, 16, 0.2);
+    padding: 12px 0;
+    max-width: 80%;
+    margin: 0 auto 40px auto;
+}
+
+/* ===================================================
+   HIỆU ỨNG TRÁI TIM KHOANH TRÒN NGÀY CƯỚI & NHẤP NHÁY (IMAGE_AF0BAA.PNG)
+=================================================== */
+.calendar-day.wedding-selected-day {
+    color: #b31010 !important;   /* Số 8 chuyển sang màu đỏ hoàng gia */
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+/* ===================================================
+   ĐỊNH DẠNG KHỐI BỘ LỊCH MINI (WEDDING CALENDAR)
+=================================================== */
+.wedding-calendar {
+    max-width: 320px;            /* Khống chế độ rộng lịch nằm vừa vặn tinh tế */
+    margin: 0 auto 35px auto;    /* Căn giữa lịch và tạo khoảng cách xuống nút đếm ngược */
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 1px dashed rgba(179, 16, 16, 0.15); /* Đường chỉ chấm mờ viền trên */
+    border-bottom: 1px dashed rgba(179, 16, 16, 0.15); /* Đường chỉ chấm mờ viền dưới */
+}
+
+/* Tiêu đề Tháng 08 / 2026 */
+.calendar-month-year {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 16px;
+    color: #b38446;              /* Màu vàng kim sang trọng quý phái */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Khung lưới chia đều 7 cột cho 7 ngày trong tuần */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 12fr);
+    row-gap: 10px;               /* Khoảng cách giãn giữa các hàng ngày */
+    column-gap: 5px;
+    text-align: center;
+}
+
+/* Định dạng chung cho từng ô ngày */
+.calendar-day {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: #444444;
+    height: 32px;
+    line-height: 32px;
+    width: 32px;
+    margin: 0 auto;
+    position: relative;
+    font-weight: 400;
+}
+
+/* Các chữ cái T2, T3, T4 đầu mục */
+.header-day {
+    font-weight: 600;
+    color: #b38446;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(179, 16, 16, 0.08);
+    margin-bottom: 5px;
+}
+
+/* Đổi màu riêng cho cột Chủ Nhật thành màu đỏ mờ giống thực tế */
+.sun-day {
+    color: #b31010;
+    opacity: 0.7;
+}
+.header-day.sun-day {
+    opacity: 1;
+}
+
+/* ===================================================
+   Ô NGÀY CƯỚI CÓ HÌNH TRÁI TIM BAO QUANH & NHẤP NHÁY MƯỢT MÀ
+=================================================== */
+.calendar-day.wedding-selected-day {
+    color: #b31010 !important;   /* Số 8 hiển thị màu đỏ hoàng gia dứt khoát */
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    background-color: transparent !important; /* Xóa bỏ hoàn toàn nền tròn đỏ cũ */
+    border-radius: 0 !important;              /* Xóa bo tròn cũ để không lỗi hình dáng */
+    box-shadow: none !important;              /* Xóa bóng đổ cũ */
+}
+
+/* Tạo hình trái tim nét vẽ nghệ thuật bao quanh số 8 */
+.calendar-day.wedding-selected-day::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;    /* Tăng nhẹ kích thước lên 44px để ôm trọn số 8 không bị kích */
+    height: 44px;
+    z-index: -1;    /* Nằm ẩn phía dưới để chữ số 8 đè lên trên rõ ràng */
+    
+    /* Đường dẫn SVG chứa hình trái tim nét mảnh */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b31010' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'/></svg>");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* Gán hiệu ứng nhịp đập trái tim nhấp nháy */
+    animation: heartBeatBlink 1.5s infinite ease-in-out;
+}
+
+/* BẢNG TẠO HIỆU ỨNG NHẤP NHÁY / NHỊP ĐẬP TRÁI TIM CO GIÃN */
+@keyframes heartBeatBlink {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.15); /* Phình to nhẹ 15% */
+        opacity: 0.5;                                  /* Mờ nhẹ tạo hiệu ứng nhấp nháy lung linh */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+/* KHỐI ĐẾM NGƯỢC (COUNTDOWN) - Cải tiến mượt mà, tối ưu trên di động */
+.countdown {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between; /* Đàn hồi đều theo hàng ngang */
+    gap: 8px;
+}
+
+
+.countdown-title {
+    /* Đổi sang font chữ uốn lượn nghệ thuật giống ảnh mẫu */
+    font-family: 'Great Vibes', 'Alex Brush', cursive; 
+    
+    /* Phóng to cỡ chữ lên một chút vì font Script nhìn sẽ nhỏ hơn font thường */
+    font-size: 42px;               
+    
+    color: #b31010;                /* Màu đỏ trầu đồng bộ */
+    text-align: center;            
+    font-weight: 400;              /* Font uốn lượn nên để nét mảnh tự nhiên */
+    
+    /* TẮT VIẾT HOA để chữ uốn lượn đúng kiểu viết tay */
+    text-transform: none;          
+    
+    letter-spacing: 1px;           
+    margin-top: 40px;              
+    margin-bottom: 5px;            /* Điều chỉnh lại khoảng cách cho vừa vặn với ô số */
+}
+/* Từng ô số đếm ngược */
+.count-box {
+    flex: 1; /* Tự động chia đều không gian cân đối */
+    min-width: 0;
+    padding: 15px 5px;
+    background: #faf7f2; /* Nền kem nhẹ tạo chiều sâu trên khối giấy trắng */
+    border-radius: 16px;
+    border: 1px solid rgba(179, 16, 16, 0.05);
+    transition: all 0.4s ease;
+}
+
+/* Hiệu ứng nhấc lên nhẹ khi di chuột */
+.count-box:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(179, 16, 16, 0.08);
+    border-color: rgba(179, 16, 16, 0.2);
+}
+
+/* Số đếm to rõ, sắc nét */
+.count-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #b31010;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Chữ Ngày/Giờ/Phút/Giây bên dưới số */
+.count-box span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    color: #b38446;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+/* Tối ưu hiển thị màn hình nhỏ */
+@media (max-width: 375px) {
+    .count-box h3 {
+        font-size: 24px;
+    }
+    .count-box span {
+        font-size: 10px;
+    }
+}
+#couple {
+    padding: 80px 20px;
+    background: #ffffff;
+    width: 100%;
+}
+
+/* Khống chế toàn bộ vùng chứa cô dâu chú rể tối đa 500px */
+.couple-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Đẩy dạt 2 bên cân đối */
+    align-items: center;
+    gap: 10px;                     /* Khoảng cách an toàn để không bị vỡ hàng */
+}
+
+.person {
+    width: 42%;                    /* Giới hạn chiều rộng mỗi block người */
+    text-align: center;
+}
+
+/* Khung ảnh thu nhỏ lại từ 280px xuống 160px để vừa khít bề ngang 500px */
+.person img {
+    transition: 0.5s ease-in-out;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 3px solid #ffffff;     /* Tạo viền trắng mảnh bao quanh ảnh */
+    outline: 1px solid rgba(179, 16, 16, 0.2); /* Viền đỏ mờ ngoài cùng cực sang */
+}
+
+.person img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Tên cô dâu/chú rể đổi sang font chữ có chân đồng bộ thiệp cưới, kích thước vừa vặn */
+.person h3 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    margin-top: 18px;
+    font-size: 24px;               /* Thu nhỏ từ 35px xuống 24px để không bị tràn dòng */
+    color: #b31010;
+    font-weight: 600;
+}
+
+.person p {
+    font-size: 13px;
+    color: #b38446;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Icon trái tim ở giữa thu size nhỏ lại tương thích tỷ lệ ảnh 160px */
+.heart {
+    font-size: 32px;
+    width: 10%;
+    text-align: center;
+    animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+/* Tiêu đề lớn phía trên */
+#couple .section-title {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+#couple .section-title h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 52px;              /* Hạ từ 70px xuống 52px nhìn thanh thoát hơn */
+    color: #b31010;
+    font-weight: normal;
+}
+
+/* Hỗ trợ hiển thị mượt trên màn hình điện thoại siêu nhỏ (dưới 400px) */
+@media (max-width: 414px) {
+    .couple-wrapper {
+        gap: 5px;
+    }
+    .person img {
+        width: 130px;
+        height: 130px;
+    }
+    .person h3 {
+        font-size: 20px;
+    }
+    #couple .section-title h2 {
+        font-size: 42px;
+    }
+}
+/* =========================
+   STORY
+========================= */
+
+#story{
+
+    background:#faf7f2;
+
+    padding:120px 20px;
+}
+
+.story-container{
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+.story-item{
+
+    background:white;
+
+    padding:30px;
+
+    margin-bottom:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+}
+
+.story-item h3{
+
+    color:#c79c60;
+
+    margin-bottom:10px;
+}
+
+.story-item h4{
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   EVENT
+========================= */
+
+.family-card-border {
+    border: 2px solid #b31010;  
+    border-radius: 40px;         
+    padding: 60px 40px;          
+    background-color: #ffffff;   
+    width: 100%;               
+    max-width: 480px;  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+    
+    margin: 0 auto 50px auto;    
+}
+
+.wedding-info-title {
+    text-align: center;
+    margin-bottom: 10px;  /* Tạo khoảng cách thông thoáng xuống khung dưới */
+    margin-top: 10;
+    width: 100%;
+}
+
+.wedding-info-title h2 {
+    font-family: 'Alex Brush', 'Great Vibes', cursive;
+    font-size: 50px;      
+    
+    color: #b31010;       
+    
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: none; /* Giữ nguyên chữ hoa chữ thường để các nét móc uốn lượn tự nhiên */
+    
+    /* Đổ bóng chữ rất mờ nhẹ giúp nét chữ thanh mảnh nổi bật hơn */
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.05); 
+}
+
+/* Thông tin bố mẹ 2 bên */
+.family-columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;         
+}
+
+.family-column {
+    width: 46%;
+    text-align: center;
+}
+
+.side-title {
+    font-family: Arial, sans-serif;
+    font-size: 16px;             
+    color: #b31010;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.parents-label {
+    font-size: 14px;             
+    color: #666666;
+    margin-bottom: 4px;
+}
+
+.parent-name {
+    font-size: 18px;             /* To rõ ràng */
+    color: #b31010;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+.family-address {
+    font-size: 14px;             
+    color: #777777;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Phần báo tin ở tâm thiệp */
+.announcement-wrap {
+    text-align: center;
+}
+
+.script-text {
+    font-family: 'Great Vibes', cursive;
+    font-size: 46px;             /* Chữ viết tay phóng lớn bay bướm hẳn lên */
+    color: #b31010;
+    margin-bottom: 8px;
+}
+
+.main-announce-title {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    letter-spacing: 2px;
+    margin-bottom: 45px;
+}
+
+/* Khối hiển thị tên dâu rể */
+.couple-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ÉP TIÊU CHUẨN MẪU: Chữ có chân (Serif), TO DỨT KHOÁT, dãn rộng chiều ngang */
+.person-wedding-name {
+    font-family: 'Playfair Display', 'Georgia', serif; /* Font chữ có chân quý phái như mẫu */
+    font-size: 52px;             /* Đẩy hẳn lên cỡ 52px cực kỳ hoành tráng và lấp đầy khung */
+    font-weight: 500;            
+    color: #b31010;
+    letter-spacing: 4px;         /* Dãn khoảng cách chữ rộng ra */
+    line-height: 1.2;
+}
+
+.role-sub {
+    font-size: 14px;
+    color: #b38446;
+    font-style: italic;
+    display: block;
+}
+
+.center-heart-svg {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===================================================
+   KHỐI THỜI GIAN CHI TIẾT (NẰM NGOÀI KHUNG VIỀN ĐỎ ĐÚNG TỶ LỆ)
+   =================================================== */
+.ceremony-details {
+    text-align: center;
+    margin-top: 20px;
+    
+    /* ĐỒNG BỘ TỶ LỆ TRỤC DỌC VỚI KHUNG TRÊN */
+    width: 90%;
+    max-width: 480px;            /* Ép bằng chiều ngang với khung viền đỏ */
+    margin-left: auto;           /* Căn giữa tự động bên trái */
+    margin-right: auto;          /* Căn giữa tự động bên phải */
+}
+.ceremony-header {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 32px;             /* Tên LỄ THÀNH HÔN to đậm, rõ ràng */
+    color: #b31010;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.time-prefix {
+    font-size: 18px;
+    color: #b38446;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.highlight-day {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Hàng thời gian Giờ | Ngày | Năm dãn cách đều đặn quý phái */
+.wedding-time-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;                  
+    margin: 3px 0;
+}
+
+.time-col.side-val {
+    font-size: 22px;             /* Giờ và năm to rõ nét */
+    color: #b31010;
+    font-weight: 600;
+    min-width: 10px;
+}
+
+/* Vạch ngăn cách dọc mỏng, cao */
+.time-vertical-line {
+    font-size: 40px;
+    color: #b31010;
+    font-weight: 100;
+    opacity: 0.5;
+}
+
+/* Con số ngày cưới "01" ĐẬM nét, TO KHỔNG LỒ làm tiêu điểm thị giác */
+.time-col.center-big-day {
+    font-size: 72px;             /* Phóng lớn lên hẳn 72px cực đẹp giống ảnh */
+    font-weight: bold;            
+    color: #b31010;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    line-height: 1;
+}
+
+.lunar-calendar-text {
+    font-size: 16px;
+    color: #b38446;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.geo-title {
+    font-size: 20px;             
+    color: #b38446;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Tự động tối ưu co giãn mượt mà khi xem trên điện thoại di động */
+@media (max-width: 576px) {
+    #event { padding: 40px 15px; }
+    .family-card-border { padding: 40px 20px; border-radius: 30px; margin-bottom: 35px; }
+    .person-wedding-name { font-size: 32px; letter-spacing: 2px; }
+    .ceremony-header { font-size: 24px; }
+    .time-col.center-big-day { font-size: 48px; }
+    .wedding-time-row { gap: 15px; }
+    .time-col.side-val { min-width: 75px; font-size: 16px; }
+    .parent-name { font-size: 15px; }
+    .side-title { font-size: 14px; }
+}
+
+/* =========================
+   GIFT
+========================= */
+
+#gift{
+    padding:120px 20px;
+    background:white;
+}
+
+.gift-card{
+    max-width:500px;
+    margin:auto;
+
+    text-align:center;
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.gift-card img{
+    width:250px;
+    margin-bottom:20px;
+}
+
+.gift-card h3{
+    color:#c79c60;
+    margin-bottom:10px;
+}
+/* ===================================================
+GALLERY 
+   =================================================== */
+
+#gallery {
+    padding: 10px 20px;
+    background-color: #faf7f2 !important; /* Giữ màu nền kem trơn đồng bộ toàn thiệp */
+    width: 100%;
+}
+
+/* Tiêu đề Album */
+#gallery .section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#gallery .section-title h2 {
+    /* Đổi sang font chữ uốn lượn bay bướm nghệ thuật */
+    font-family: 'Great Vibes', 'Alex Brush', cursive;
+    
+    /* Phóng to cỡ chữ lên khoảng 56px để chữ nét mảnh nhìn rõ và sang */
+    font-size: 56px;
+    
+    color: #b31010;          /* Giữ màu đỏ trầu hoàng gia */
+    font-weight: normal;     /* Để nét chữ mảnh uốn lượn tự nhiên, không bị dày thô */
+    margin-bottom: 5px;
+    
+    /* Đảm bảo không bị ép viết hoa toàn bộ để các nét chữ nối nhau */
+    text-transform: none;    
+}
+/* Thêm một họa tiết gạch ngang nhỏ dưới tiêu đề cho trang nhã */
+#gallery .section-title::after {
+    content: "❖ ─── ❖";
+    display: block;
+    font-size: 12px;
+    color: #b38446; /* Màu vàng kim */
+    opacity: 0.6;
+    letter-spacing: 2px;
+}
+
+/* Khung lưới chứa ảnh thông minh */
+.gallery-grid {
+    max-width: 500px; /* Khống chế độ rộng bằng phom chuẩn của thiệp */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Chia thành 2 cột đều nhau */
+    gap: 15px; /* Khoảng cách giữa các bức ảnh */
+    padding: 0 10px;
+}
+
+/* Từng ô chứa ảnh (Thẻ <a>) */
+.gallery-grid a {
+    display: block;
+    position: relative;
+    border-radius: 20px; /* Bo góc mịn màng sang trọng */
+    overflow: hidden; /* Giữ ảnh không bị tràn ra ngoài khi phóng to */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* Đổ bóng nhẹ */
+    background: #ffffff;
+    border: 4px solid #ffffff; /* Tạo viền khung ảnh trắng như ảnh giấy thật */
+    aspect-ratio: 1 / 1; /* Ép ảnh về dạng vuông ngăn nắp (Nếu muốn ảnh chữ nhật tự nhiên thì xóa dòng này đi) */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hình ảnh bên trong */
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giúp ảnh không bị méo, tự co giãn đẹp */
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+/* --- HIỆU ỨNG TƯƠNG TÁC HOVER SIÊU MƯỢT --- */
+
+/* Khi di chuột vào ô ảnh */
+.gallery-grid a:hover {
+    transform: translateY(-5px); /* Nhấc nhẹ ảnh lên */
+    box-shadow: 0 12px 28px rgba(179, 16, 16, 0.12); /* Đổ bóng mờ màu đỏ trầu */
+    border-color: #faf7f2; /* Chuyển nhẹ màu viền */
+}
+
+/* Ảnh tự động phóng to nhẹ tạo cảm giác có chiều sâu */
+.gallery-grid a:hover img {
+    transform: scale(1.06);
+}
+
+/* Tạo một lớp phủ màu vàng kim mờ lướt qua khi hover */
+.gallery-grid a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(179, 16, 16, 0) 0%, rgba(179, 16, 16, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.gallery-grid a:hover::after {
+    opacity: 1;
+}
+
+/* Hỗ trợ hiển thị mượt mà trên điện thoại màn hình nhỏ */
+@media (max-width: 480px) {
+    .gallery-grid {
+        gap: 10px; /* Thu hẹp khoảng cách giữa các ảnh trên mobile */
+        padding: 0 5px;
+    }
+    
+    .gallery-grid a {
+        border-width: 3px; /* Giảm độ dày viền trắng */
+        border-radius: 14px; /* Bo góc nhỏ hơn một chút cho cân đối */
+    }
+    
+    #gallery .section-title h2 {
+        font-size: 42px; /* Thu nhỏ tiêu đề trên mobile */
+    }
+}
+
+/* ===================================================
+   SECTION MAP - PHONG CÁCH KHUNG TRANH Á ĐÔNG CAO CẤP
+=================================================== */
+
+#map {
+    padding: 60px 20px;
+    background-color: #faf7f2 !important; /* Đồng bộ nền kem trơn nhã nhặn */
+    width: 100%;
+}
+
+/* Tiêu đề phần địa điểm */
+#map .section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#map .section-title h2 {
+    font-family: 'Great Vibes', cursive;  /* Font chữ uốn lượn bay bướm nghệ thuật */
+    font-size: 56px;           /* Kích thước chữ uốn lượn đồng bộ Album ảnh */
+    color: #b31010;            /* Màu đỏ trầu hoàng gia */
+    font-weight: normal;
+    text-transform: none;      /* Giữ nguyên nét chữ viết tay lãng mạn */
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* Khung viền bọc ngoài khống chế bề ngang 500px chuẩn di động */
+.map-wrapper {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+/* Hộp chứa bản đồ giả lập một bức tranh nghệ thuật bọc viền giấy */
+.map-container {
+    width: 100%;
+    background: #ffffff;
+    padding: 6px;              /* Khoảng hở viền trắng tinh tế xung quanh bản đồ */
+    border-radius: 28px;       /* Bo góc tròn siêu mịn màng */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04), 0 4px 15px rgba(179, 16, 16, 0.02); /* Đổ bóng kép dịu mắt */
+    border: 1px solid rgba(179, 16, 16, 0.06); /* Viền đỏ vi mô siêu mảnh bao quanh */
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Định dạng cho khung bản đồ Iframe bên trong */
+.map-container iframe {
+    width: 100%;
+    height: 380px;             /* Hạ chiều cao từ 500px xuống 380px giúp bố cục trên mobile cân đối, không bị quá dài */
+    border: none;
+    border-radius: 22px;       /* Bo góc bản đồ ôm khít vào khung viền ngoài */
+    display: block;
+}
+
+/* Hiệu ứng nổi nhẹ tinh tế khi lướt ngón tay qua */
+.map-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(179, 16, 16, 0.1);
+    border-color: rgba(179, 16, 16, 0.15);
+}
+
+/* Tối ưu hóa hiển thị trên các thiết bị di động màn hình nhỏ */
+@media (max-width: 480px) {
+    #map {
+        padding: 50px 15px;
+    }
+    #map .section-title h2 {
+        font-size: 44px;       /* Thu nhỏ tiêu đề vừa vặn mobile */
+    }
+    .map-container iframe {
+        height: 320px;         /* Thu gọn chiều cao bản đồ trên mobile để dễ cuộn trang không bị kẹt ngón tay */
+    }
+}
+
+#musicBtn{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    background:white;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+#musicBtn.playing {
+
+    animation:
+    spin 4s linear infinite;
+}
+
+@keyframes spin {
+
+    from {
+
+        transform: rotate(0);
+    }
+
+    to {
+
+        transform: rotate(360deg);
+    }
+}
+/*==========================
+   FOOTER
+========================== */
+
+footer {
+    padding: 60px 20px 40px 20px;
+    background-color: #ffffff; /* Nền trắng sạch sẽ làm nổi bật chữ đỏ vàng */
+    text-align: center;
+    width: 100%;
+    border-top: 1px dashed rgba(179, 16, 16, 0.15); /* Đường chỉ chấm mờ ngăn cách */
+    position: relative;
+}
+
+
+/* Ký tự & màu vàng kim quý phái */
+.footer-names span {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #b38446;
+    font-style: italic;
+    display: inline-block;
+    margin: 0 8px;
+}
+
+/* Chữ Thank You font viết tay bay bướm */
+.footer-thankyou {
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #b38446;
+    margin-bottom: 5px;
+}
+
+/* Lời cảm ơn chân thành bằng font hiện đại dễ đọc */
+.footer-sub-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+/* Họa tiết nơ thắt thắt nút cuối trang */
+.footer-deco-bottom {
+    color: #b38446;
+    font-size: 13px;
+    opacity: 0.6;
+    letter-spacing: 2px;
+}
+
+/* BẢNG TẠO HIỆU ỨNG NHỊP ĐẬP CO GIÃN NHẸ NHÀNG */
+@keyframes footerHeartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); }
+}
+
+/* Tối ưu hiển thị mượt mà trên Mobile */
+@media (max-width: 576px) {
+    footer { padding: 45px 15px 30px 15px; }
+    .footer-names { font-size: 38px; }
+    .footer-thankyou { font-size: 30px; }
+    .footer-sub-text { font-size: 12px; }
+}
+/* ==========================
+   HERO ANIMATION
+========================== */
+
+.hero-title {
+
+    overflow: hidden;
+}
+
+.hero-title .line1,
+.hero-title .line2,
+.hero-title .and {
+
+    display: block;
+
+    opacity: 0;
+
+    transform: translateY(80px);
+
+    animation-fill-mode: forwards;
+}
+
+.hero-title .line1 {
+
+    animation: slideUp 1.2s ease forwards;
+}
+
+.hero-title .and {
+
+    animation: slideUp 1.2s ease forwards;
+
+    animation-delay: 0.4s;
+}
+
+.hero-title .line2 {
+
+    animation: slideUp 1.2s ease forwards;
+
+    animation-delay: 0.8s;
+}
+
+@keyframes slideUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(80px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+
+/* ==========================
+   WEDDING GATE ANIMATION
+========================== */
+/* Khung bọc cánh cửa - Khóa chặt theo kích thước của #hero */
+.wedding-gate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999; 
+    display: flex;
+    pointer-events: auto;
+    transition: opacity 0.5s ease 1s, visibility 0.5s ease 1s;
+}
+
+/* Cấu hình cánh cửa bên trái và bên phải */
+.gate-left, .gate-right {
+    width: 50%;
+    height: 100%;
+    background-color: #b31010; 
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+/* Tạo một đường viền vàng nhỏ ở mép cửa bên trái nhìn cho có điểm nhấn cắt đôi */
+.gate-left {
+    border-right: 1px solid #ffd700;
+}
+
+/* Nút bấm hình vuông chữ Hỷ ở giữa */
+.gate-center-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+    border: 3px solid #c79c60;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.gate-center-btn span {
+    font-size: 32px;
+    color: #b31010;
+    line-height: 1;
+}
+
+.gate-center-btn p {
+    font-size: 11px;
+    color: #666;
+    margin-top: 4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ===================================================
+   HIỆU ỨNG KÉO CỬA RA KHI BẤM (Khi có class .open)
+   =================================================== */
+
+/* Cánh trái dạt hết sang trái màn hình */
+.wedding-gate.open .gate-left {
+    transform: translateX(-100%);
+}
+
+/* Cánh phải dạt hết sang phải màn hình */
+.wedding-gate.open .gate-right {
+    transform: translateX(100%);
+}
+
+/* Nút bấm chữ Hỷ thu nhỏ lại rồi biến mất */
+.wedding-gate.open .gate-center-btn {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+/* Ẩn hẳn toàn bộ khung cửa sau khi dạt xong để lộ hoàn toàn phần Hero phía sau */
+.wedding-gate.open {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Khóa tương tác để bấm được nút "MỞ THIỆP" bên dưới */
+}
