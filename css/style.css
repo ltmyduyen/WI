@@ -10,7 +10,7 @@
 html, body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden; /* Chặn đứng hoàn toàn hiện tượng lag/tràn màn hình theo chiều ngang */
+    overflow-x: hidden; 
 }
 
 .wedding-card-container {
@@ -260,12 +260,14 @@ body {
 
 /* "Trân trọng kính mời" - Thanh thoát, tinh tế */
 .invite-small {
+    width: 100%;
+    max-width: 400px;
     font-family: 'Montserrat', sans-serif;
     color: #b38446;
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-bottom: 25px;
-    font-size: 20px;
+    margin-bottom: 30       px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -623,7 +625,7 @@ body {
     flex: 1;
     min-width: 0;
     text-align: center;
-    display: flex;         /* Bổ sung để ép các thành phần bên trong xếp hàng dọc */
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -631,10 +633,10 @@ body {
 /* Khung bọc ảnh dạng tròn hoặc bo góc */
 .img-frame {
     width: 100%;             /* Tự động lấy theo độ rộng của khối .person */
-    max-width: 300px;        /* Giới hạn kích thước ảnh lớn nhất trên máy tính */
+    max-width: 400px;        /* Giới hạn kích thước ảnh lớn nhất trên máy tính */
     aspect-ratio: 1 / 1;     /* Ép khung luôn là hình vuông chuẩn để bo tròn không bị méo */
     margin: 10px auto auto;/* Căn giữa khung ảnh */
-    border-radius: 50%;      /* Bo tròn xịn mịn */
+    border-radius:100%;      /* Bo tròn xịn mịn */
     overflow: hidden;        /* Cắt bỏ phần ảnh thừa tràn ra ngoài khung tròn */
     border: 3px solid #ffffff; 
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
@@ -863,10 +865,13 @@ body {
 }
 
 .wedding-info-title h2 {
+    width: 100%;
+    max-width: 450px;
+    text-align: center ;
     font-family: 'Alex Brush', 'Great Vibes', cursive;
-    font-size: 45px;
+    font-size: 40px;
     color: #b31010;
-    font-weight: 580;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 1px;
     text-transform: none;
@@ -1014,6 +1019,8 @@ body {
 
 .time-prefix {
     font-size: 25px;
+    width: 90%;
+    max-width: 450px;
     color: #b38446;
     line-height: 1.6;
     margin-bottom: 20px;
