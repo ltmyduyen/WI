@@ -1320,7 +1320,7 @@ GALLERY
 
 .map-address-detail {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 2px;
     color: #333333;
     font-weight: 600;
     /* In đậm dòng tên trung tâm/nhà hàng */
@@ -1331,8 +1331,10 @@ GALLERY
 .map-address-detail span {
     font-weight: 400;
     /* Dòng địa chỉ chi tiết để nét thường thanh lịch */
-    color: #666666;
-    font-size: 14px;
+    color: black;
+    line-height: 1.5;
+
+    font-size: 20px;
 }
 
 /* NÚT BẤM DẪN ĐƯỜNG THÔNG MINH */
@@ -1412,7 +1414,10 @@ GALLERY
     }
 
     .map-address-detail {
-        font-size: 14px;
+        font-size: 20px;
+        border: #333333;
+        font-weight : bolder;
+        
     }
 
     .map-address-detail span {
