@@ -260,13 +260,14 @@ body {
 
 /* "Trân trọng kính mời" - Thanh thoát, tinh tế */
 .invite-small {
+
     width: 100%;
     max-width: 400px;
     font-family: 'Montserrat', sans-serif;
     color: #b38446;
     text-transform: uppercase;
     letter-spacing: 3px;
-    margin-bottom: 30       px;
+    margin-bottom: 30px;
     font-size: px;
     font-weight: 500;
 }
@@ -1022,7 +1023,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 25px;
-    margin: 3px 0px 30px 0px    ;
+    margin: 3px 0px 0px 0px;
 }
 
 .time-col.side-val {
